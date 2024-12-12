@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Header from "@/app/components/Header";
 
 export default function Home() {
     // This is a server component. It will be executed on the server side.
@@ -7,8 +8,8 @@ export default function Home() {
     // Server Side components are executed server side and sent to the client and rendered as HTML
     console.log("Executing server side");
     return (
-        <div className="flex flex-col justify-center items-center h-dvh w-dvw">
-            Welcome to Next JS!
+        <main className="flex flex-col justify-center items-center h-dvh w-dvw">
+            <Header></Header>
             <p>
                 <Link
                     href={"/about"}
@@ -17,6 +18,6 @@ export default function Home() {
                     About Us
                 </Link>
             </p>
-        </div>
+        </main>
     );
 }
